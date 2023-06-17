@@ -13,7 +13,7 @@ const contactsList = [
 
 export default function App() {
   const [contacts, setContacts] = useState(
-    () => JSON.parse(window.localStorage.getItem('contacts')) ?? contactsList
+    () => JSON.parse(window.localStorage.getItem('contacts')) || contactsList
   );
   const [filter, setFilter] = useState('');
   useEffect(() => {
